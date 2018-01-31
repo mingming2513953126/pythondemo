@@ -154,7 +154,8 @@ def get_url_from_xml(name):
             for c in u.getchildren():
                 url_list.append(c.text)
 
-    url = '/v2/' + '/'.join(url_list)
+    # url = '/v2/' + '/'.join(url_list)
+    url = url_list
     return url
 
 if __name__ == "__main__":

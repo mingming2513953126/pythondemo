@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/接口测试/jiekou/20180129" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/interfaceTest" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6.4 (C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

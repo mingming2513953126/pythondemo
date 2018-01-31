@@ -94,7 +94,8 @@ class Login(unittest.TestCase):
         :return:
         """
         info = self.info
-        if info['code'] == 0:
+        # if info['code'] == 0:？
+        if info('code') == 0:
             # get uer token
             token_u = common.get_value_from_return_json(info, 'member', 'token')
             # set user token to config file
