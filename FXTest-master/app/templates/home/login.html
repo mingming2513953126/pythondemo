@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API自动化平台</title>
+    <link href="{{url_for('static',filename='css/bootstrap.css')}}"  rel="stylesheet">
+    <link href="{{url_for('static',filename='css/demo.css')}}"  rel="stylesheet">
+    <link href="{{url_for('static',filename='css/main.css')}}"  rel="stylesheet">
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</head>
+<body style="    background-color: beige;">
+<div id="wrapper">
+    <div class="vertical-align-wrap">
+        <div class="vertical-align-middle">
+            <div class="header " style="">
+                <h1 style="text-align: center;">登录</h1>
+            </div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <p class='flashes' style='text-align:center;color:red;'>
+                        {% for message in messages %}
+                            <li style="text-align:center;color:red">{{ message }}</li>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            {% endwith %}
+            {% block body %}{% endblock %}
+            <form class="form-auth-small" action="{{ url_for('home.login') }}" method="POST" style="width: 40%;
+    margin-left: 30%;">
+                {{form.hidden_tag()}}
+                <div class="form-group">
+                    {% if form.username.errors %}
+                        {% for e in form.username.errors %}
+                            <p class="flashes">{{ e }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {{ form.username(class='form-control') }}
+                    <div class="form-group">
+                        {{ form.password(class='form-control') }}
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
+
+                </div>
+
+            </form>
+            <h3 style="text-align: center">管理员：liwanlei  密码:liwanlei </h3>
+            <h4 style="text-align: center " >
+                <strong>现在系统没有注册功能可以在之前版本把注册功能还原到本版本，也可以通过用户管理添加</strong></h4>
+        </div> </div></div>
+</body>
+</html>
