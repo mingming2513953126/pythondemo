@@ -29,7 +29,7 @@ class ConfigHttp:
         :param: interface url
         :return:
         """
-        self.url = scheme+'://'+host+url
+        self.url = scheme+'://'+host+url     # scheme = https     host = www.baidu.com     url = loginAndBindWeixin.action
 
     def set_headers(self, header):
         """

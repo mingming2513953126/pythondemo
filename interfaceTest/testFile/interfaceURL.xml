@@ -7,7 +7,7 @@
     </url>
 
     <url name="login">
-        <group>'loginAndBindWeixin.action'</group>
+        <group>loginAndBindWeixin.action</group>
     </url>
 
     <url name="registerQuick">
