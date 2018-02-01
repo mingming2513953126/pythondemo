@@ -29,13 +29,16 @@ class Login(unittest.TestCase):
         self.case_name = str(case_name)
         self.method = str(method)
         self.token = str(token)
-        self.email = str(email)
-        self.password = str(password)
+        # self.email = str(email)
+        self.email = email
+        # self.password = str(password)
+        self.password = password
         self.result = str(result)
         self.code = str(code)
         self.msg = str(msg)
         self.return_json = None
         self.info = None
+
 
     def description(self):
         """
@@ -69,18 +72,22 @@ class Login(unittest.TestCase):
         elif self.token == '1':
             token = None
 
+        """
         # set headers
         header = {"token": str(token)}
         configHttp.set_headers(header)
         print("第二步：设置header(token等)")
-
+        """
         # set params
         data = {"email": self.email, "password": self.password}
         configHttp.set_data(data)
+        print(data)
         print("第三步：设置发送请求的参数")
 
         # test interface
+        # self.return_json = configHttp.post()
         self.return_json = configHttp.post()
+        # method = self.return_json
         method = str(self.return_json.request)[int(str(self.return_json.request).find('['))+1:int(str(self.return_json.request).find(']'))]
         print("第四步：发送请求\n\t\t请求方法："+method)
 
@@ -94,6 +101,8 @@ class Login(unittest.TestCase):
         :return:
         """
         info = self.info
+        print(info)        # info = -5
+        """
         if info['code'] == 0:
         # if info('code') == 0:
             # get uer token
@@ -102,8 +111,16 @@ class Login(unittest.TestCase):
             localReadConfig.set_headers("TOKEN_U", token_u)
         else:
             pass
-        self.log.build_case_line(self.case_name, self.info['code'], self.info['msg'])
+        """
+        # print(self.case_name)
+        # print(self.info['msg'])
+        # print(self.info['code'])
+
+
+        # self.log.build_case_line(self.case_name, self.info['code'], self.info['msg'])
+        self.log.build_case_line(self.case_name, self.code, self.msg)
         print("测试结束，输出log完结\n\n")
+
 
     def checkResult(self):
         """
@@ -111,6 +128,7 @@ class Login(unittest.TestCase):
         :return:
         """
         self.info = self.return_json.json()
+        print(self.info)
         # show return message
         common.show_return_msg(self.return_json)
 

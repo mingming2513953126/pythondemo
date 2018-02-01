@@ -77,6 +77,7 @@ class Register(unittest.TestCase):
         data = {'email': self.email,
                 'password': self.password,
                 'password_confirm': self.confirmpwd}
+        print(data)
         localConfigHttp.set_data(data)
 
         # test interface

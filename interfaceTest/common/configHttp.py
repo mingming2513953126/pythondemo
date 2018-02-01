@@ -20,6 +20,7 @@ class ConfigHttp:
         self.params = {}
         self.data = {}
         self.url = None
+        # self.url = {}
         self.files = {}
         self.state = 0
 
@@ -29,7 +30,8 @@ class ConfigHttp:
         :param: interface url
         :return:
         """
-        self.url = scheme+'://'+host+url     # scheme = https     host = www.baidu.com     url = loginAndBindWeixin.action
+        self.url = scheme+'://'+host+'/'+url     # scheme = https     host = www.baidu.com     url = loginAndBindWeixin.action
+        return url
 
     def set_headers(self, header):
         """
@@ -75,6 +77,7 @@ class ConfigHttp:
         :return:
         """
         try:
+            # response = requests.get(self.url, headers=self.headers, params=self.params, timeout=float(timeout))
             response = requests.get(self.url, headers=self.headers, params=self.params, timeout=float(timeout))
             # response.raise_for_status()
             return response
@@ -91,7 +94,8 @@ class ConfigHttp:
         :return:
         """
         try:
-            response = requests.post(self.url, headers=self.headers, params=self.params, data=self.data, timeout=float(timeout))
+            # response = requests.post(self.url, headers=self.headers, params=self.params, data=self.data, timeout=float(timeout))
+            response = requests.post(self.url,  data=self.data)
             # response.raise_for_status()
             return response
         except TimeoutError:
