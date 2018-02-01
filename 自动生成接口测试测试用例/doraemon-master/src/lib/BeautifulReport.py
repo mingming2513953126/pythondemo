@@ -65,7 +65,8 @@ FIELDS = {
 
 class PATH:
     """ all file PATH meta """
-    config_tmp_path = SITE_PAKAGE_PATH + '/BeautifulReport/template/template'
+    # config_tmp_path = SITE_PAKAGE_PATH + '/BeautifulReport/template/template'
+    config_tmp_path = os.path.dirname(os.path.abspath(__file__)) + '/BeautifulReport/template/template'
 
 
 class MakeResultJson:
