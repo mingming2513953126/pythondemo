@@ -62,7 +62,8 @@ def show_return_msg(response):
     msg = response.text
     print("\n请求地址："+url)
     # 可以显示中文
-    print("\n请求返回值："+'\n'+json.dumps(json.loads(msg), ensure_ascii=False, sort_keys=True, indent=4))
+    # print("\n请求返回值："+'\n'+json.dumps(json.loads(msg), ensure_ascii=False, sort_keys=True, indent=4))
+    print("\n请求返回值：" + '\n' + msg)
 # ****************************** read testCase excel ********************************
 
 

@@ -78,6 +78,7 @@ class Login(unittest.TestCase):
         """
         # set params
         data = {"username": self.username, "password": self.password}
+        print(data)
         configHttp.set_data(data)
         # print(data)
         print("第三步：设置发送请求的参数")
@@ -85,6 +86,7 @@ class Login(unittest.TestCase):
         # test interface
         # self.return_json = configHttp.post()
         self.return_json = configHttp.post()
+        # print(self.return_json)
         # method = self.return_json
         method = str(self.return_json.request)[int(str(self.return_json.request).find('['))+1:int(str(self.return_json.request).find(']'))]
         print("第四步：发送请求\n\t\t请求方法："+method)
