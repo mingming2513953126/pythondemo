@@ -13,7 +13,7 @@ info = {}
 
 @paramunittest.parametrized(*login_xls)
 class Login(unittest.TestCase):
-    def setParameters(self, case_name, method, token, email, password, result, code, msg):
+    def setParameters(self, case_name, method, token, username, password, result, code, msg):
         """
         set params
         :param case_name:
@@ -29,7 +29,7 @@ class Login(unittest.TestCase):
         self.case_name = str(case_name)
         self.method = str(method)
         self.token = str(token)
-        self.email = str(email)
+        self.username = str(username)
         self.password = str(password)
         self.result = str(result)
         self.code = str(code)
@@ -77,9 +77,9 @@ class Login(unittest.TestCase):
         print("第二步：设置header(token等)")
         """
         # set params
-        data = {"email": self.email, "password": self.password}
+        data = {"username": self.username, "password": self.password}
         configHttp.set_data(data)
-        print(data)
+        # print(data)
         print("第三步：设置发送请求的参数")
 
         # test interface
