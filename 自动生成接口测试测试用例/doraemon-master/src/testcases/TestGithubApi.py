@@ -68,3 +68,39 @@ class TestGithubApi(unittest.TestCase):
         print("Response :", response)
         print("AssertInfo: ", kwargs.get('exec_text'))
         exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_some_endpoint(self, *args, **kwargs):
+        """测试github api可用性"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_some_endpoint(self, *args, **kwargs):
+        """测试github api可用性"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_some_endpoint(self, *args, **kwargs):
+        """测试github api可用性"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_some_endpoint(self, *args, **kwargs):
+        """测试github api可用性"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))

@@ -68,3 +68,39 @@ class TestDoubanApi(unittest.TestCase):
         print("Response :", response)
         print("AssertInfo: ", kwargs.get('exec_text'))
         exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_douban_userinfo(self, *args, **kwargs):
+        """测试豆瓣获取用户api的数据"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_douban_userinfo(self, *args, **kwargs):
+        """测试豆瓣获取用户api的数据"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_douban_userinfo(self, *args, **kwargs):
+        """测试豆瓣获取用户api的数据"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
+
+    @Wraps.test_case_runner
+    @Wraps.test_case_parse
+    def test_douban_userinfo(self, *args, **kwargs):
+        """测试豆瓣获取用户api的数据"""
+        response = kwargs.get('response')
+        print("Response :", response)
+        print("AssertInfo: ", kwargs.get('exec_text'))
+        exec(kwargs.get('exec_text'))
