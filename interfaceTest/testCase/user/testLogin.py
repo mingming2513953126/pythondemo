@@ -29,10 +29,8 @@ class Login(unittest.TestCase):
         self.case_name = str(case_name)
         self.method = str(method)
         self.token = str(token)
-        # self.email = str(email)
-        self.email = email
-        # self.password = str(password)
-        self.password = password
+        self.email = str(email)
+        self.password = str(password)
         self.result = str(result)
         self.code = str(code)
         self.msg = str(msg)
@@ -100,8 +98,7 @@ class Login(unittest.TestCase):
 
         :return:
         """
-        info = self.info
-        print(info)        # info = -5
+        # info = self.info
         """
         if info['code'] == 0:
         # if info('code') == 0:
@@ -128,7 +125,6 @@ class Login(unittest.TestCase):
         :return:
         """
         self.info = self.return_json.json()
-        print(self.info)
         # show return message
         common.show_return_msg(self.return_json)
 
