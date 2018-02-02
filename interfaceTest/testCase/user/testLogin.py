@@ -13,7 +13,7 @@ info = {}
 
 @paramunittest.parametrized(*login_xls)
 class Login(unittest.TestCase):
-    def setParameters(self, case_name, method, token, username, password, result, code, msg):
+    def setParameters(self, case_name, method, token, userName, password, autosession, weiboUID, result, code, msg):
         """
         set params
         :param case_name:
@@ -29,8 +29,10 @@ class Login(unittest.TestCase):
         self.case_name = str(case_name)
         self.method = str(method)
         self.token = str(token)
-        self.username = str(username)
+        self.userName = str(userName)
         self.password = str(password)
+        self.autosession = str(autosession)
+        self.weiboUID = str(weiboUID)
         self.result = str(result)
         self.code = str(code)
         self.msg = str(msg)
@@ -77,7 +79,8 @@ class Login(unittest.TestCase):
         print("第二步：设置header(token等)")
         """
         # set params
-        data = {"username": self.username, "password": self.password}
+        data = {"userName": self.userName, "password": self.password,}
+        # data = {"username": self.username, "password": self.password, "autosession": self.autosession, "weiboUID": self.weiboUID}
         print(data)
         configHttp.set_data(data)
         # print(data)
@@ -88,6 +91,7 @@ class Login(unittest.TestCase):
         self.return_json = configHttp.post()
         # print(self.return_json)
         # method = self.return_json
+        # print(method.text)
         method = str(self.return_json.request)[int(str(self.return_json.request).find('['))+1:int(str(self.return_json.request).find(']'))]
         print("第四步：发送请求\n\t\t请求方法："+method)
 
