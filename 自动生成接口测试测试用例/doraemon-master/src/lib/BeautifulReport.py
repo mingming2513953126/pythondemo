@@ -65,8 +65,7 @@ FIELDS = {
 
 class PATH:
     """ all file PATH meta """
-    # config_tmp_path = SITE_PAKAGE_PATH + '/BeautifulReport/template/template'
-    config_tmp_path = os.path.dirname(os.path.abspath(__file__)) + '/BeautifulReport/template/template'
+    config_tmp_path = SITE_PAKAGE_PATH + '/BeautifulReport/template/template'
 
 
 class MakeResultJson:
@@ -372,8 +371,7 @@ class BeautifulReport(ReportTestResult, PATH):
             os.path.abspath(self.log_path).endswith('/') else \
             os.path.abspath(self.log_path) + '/'
 
-        # with open(template_path, 'rb') as file:
-        with open(template_path, 'wb') as file:
+        with open(template_path, 'rb') as file:
             body = file.readlines()
         with open(override_path + self.filename, 'wb') as write_file:
             for item in body:
@@ -395,8 +393,7 @@ class BeautifulReport(ReportTestResult, PATH):
         """
         pattern = '/' if platform != 'Windows' else '\\'
 
-        # with open(img_path + pattern + file_name, 'rb') as file:
-        with open(img_path + pattern + file_name, 'wb') as file:
+        with open(img_path + pattern + file_name, 'rb') as file:
             data = file.read()
         return base64.b64encode(data).decode()
 

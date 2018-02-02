@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/interfaceTest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/自动生成接口测试测试用例/doraemon-master" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6.4 (C:\Users\lh\AppData\Local\Programs\Python\Python36\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.4 (C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
