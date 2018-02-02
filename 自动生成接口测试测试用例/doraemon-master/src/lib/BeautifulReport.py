@@ -66,6 +66,10 @@ FIELDS = {
 class PATH:
     """ all file PATH meta """
     config_tmp_path = SITE_PAKAGE_PATH + '/BeautifulReport/template/template'
+    # config_tmp_path = os.path.split(os.path.realpath(__file__)) + '\\Report\\template'
+    # config_tmp_path = os.path.join(os.path.abspath(os.path.dirname(__file__)) + '\\BeautifulReport\\%s-result.html'%time.strftime("%Y%m%d%H%M", time.localtime(time.time())))
+    # day = time.strftime("%Y%m%d%H%M", time.localtime(time.time()))
+    # config_tmp_path = os.path.join(os.path.abspath(os.path.dirname(__file__)) + '\\BeautifulReport\\%s-result.html' % day)
 
 
 class MakeResultJson:
@@ -372,6 +376,7 @@ class BeautifulReport(ReportTestResult, PATH):
             os.path.abspath(self.log_path) + '/'
 
         with open(template_path, 'rb') as file:
+        # with open(template_path, 'wb') as file:
             body = file.readlines()
         with open(override_path + self.filename, 'wb') as write_file:
             for item in body:

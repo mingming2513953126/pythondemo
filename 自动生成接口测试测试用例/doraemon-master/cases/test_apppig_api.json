@@ -1,0 +1,14 @@
+{
+    "test_4_post_api": {
+        "url": "https://t.pangpangpig.com/loginAndBindWeixin.action",
+        "data": {
+            "username": "13011111103",
+            "password": "111111",
+            "autosession": "false",
+            "weiboUID": "1"
+        },
+        "method": "post",
+        "desc": "测试pppig/post接口的请求与返回结果正确"
+
+    }
+}

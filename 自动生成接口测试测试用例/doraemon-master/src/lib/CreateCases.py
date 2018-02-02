@@ -53,6 +53,7 @@ class FileMeta(config.GetDictParam):
         @return: TODO
         """
         tags = json.loads(repr(config.TestCaseLoader()))
+        print(tags)
         for item in tags:
             for class_name, body in item.items():
                 if len(body) > 1:
