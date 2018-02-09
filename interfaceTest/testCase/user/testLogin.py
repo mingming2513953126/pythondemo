@@ -80,6 +80,7 @@ class Login(unittest.TestCase):
         """
         # set params
         data = {"userName": self.userName, "password": self.password,}
+
         # data = {"username": self.username, "password": self.password, "autosession": self.autosession, "weiboUID": self.weiboUID}
         print(data)
         configHttp.set_data(data)
