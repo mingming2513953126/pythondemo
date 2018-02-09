@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/接口测试/jiekou/20180129" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/interfaceTest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/自动生成接口测试测试用例/doraemon-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/quxue_python" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
